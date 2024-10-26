@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+ </head>
+ <body>
+	<div class="main">
+	<div class="one" id="one" style="padding: 6px; margin: 6px;"> Insert Item :  </div>	
+	<div class="two" id="two" style="padding: 6px; margin: 6px;">Insert value : </div>
+	</div>
+	<button id="btn-one" onclick="function1()"> Add item </button>
+	<button id="btn-two"> Add price </button>
+
+	<script>
+		function function1(){
+			var one = document.querySelector('#one');
+			var insertt = prompt("Enter name of Product ");
+			one.innerHTML += insertt;
+		
+			let red = Math.floor(Math.random() * 120);
+    let green = Math.floor(Math.random() * 120);
+    let blue = Math.floor(Math.random() * 120);
+    const rgb = `rgb(${red},${green},${blue})`
+
+			
+			document.querySelector('.one').style.background=`${red}`;
+			function2();
+		}
+		function2 = () =>{
+			var one = document.querySelector('#two');
+			var insertt = prompt("Enter price of Product ");
+			one.innerHTML += insertt;
+		}
+
+	</script>
+  </body>
+</html>

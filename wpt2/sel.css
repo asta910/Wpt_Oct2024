@@ -1,0 +1,18 @@
+*{
+    align-items: center;
+    text-shadow: green;
+    /* background-image: url("photos/img1.jfif"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
+    color: rgb(0, 0, 0);
+    font-size: larger;
+}
+#list1{
+    background-image: url("photos/img1.jfif");
+}
+.jif{
+    width:2px;
+    height: 2px;
+    border-radius: 50px;
+}

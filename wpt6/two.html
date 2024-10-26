@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .ig{
+            padding: 2rem;
+        }
+        .containor img{
+            justify-content: center;
+            flex: 1;
+            max-block-size: 18rem;
+            margin-top: 3rem;
+        }
+        img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition: transform 1s ease,ease-in-out;
+        }
+
+        .containor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        img{
+			width:260px;
+			height:260px;
+			border:2px solid;
+			margin-right:40px;
+		}
+    </style>
+    <div class="containor">
+        <img src="./images/download (4).jfif" alt="" id="i1" class="ig">
+        <img src="./images/download (3).jfif" alt="" id="i2" class="ig">
+        <img src="./images/download (2).jfif" alt="" id="i3" class="ig">
+    </div>
+
+    <script src="./two.js"></script>
+</body>
+</html>

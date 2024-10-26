@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqery</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+
+    <h1> Hello this is IET</h1>
+    <p class="devv">This is acdac center located in shivaji nagar modern colony.</p>
+
+    <input type="text" placeholder="enter any key">
+    <button id="removerr"> Clear div</button>
+    <div class="c"> </div>
+    <script>
+        setTimeout(() => {
+
+            $('#removerr').on('click',()=>{
+                var adress = document.querySelector('.c');
+                adress.innerHTML = ' ';
+            })
+            
+
+            $('input').on('keypress',(e)=>{
+
+            if(e.which >='65' && e.which <='90' ){
+                var adress = document.querySelector('.c');
+                var childern = document.createElement('h'); 
+                childern.innerHTML = `<h4> From A_Z ALPHABET </h4>`;
+                adress.appendChild(childern);
+            }
+            else if(e.which >=97 && e.which <=122){
+                var adress = document.querySelector('.c');
+                var childern = document.createElement('h'); 
+                childern.innerHTML = `<h4> From a-z ALPHABET </h4>`;
+                adress.appendChild(childern);
+            }
+            else if(e.which >= 47 && e.which <=56){
+                var adress = document.querySelector('.c');
+                var childern = document.createElement('h'); 
+                childern.innerHTML = ` <h4> Entered an number </h4>`;
+                adress.appendChild(childern);
+            }
+            else if(e.key == "Enter"){
+                var adress = document.querySelector('.c');
+                var childern = document.createElement('h'); 
+                childern.innerHTML = ` <h4> Enter Hit </h4>`;
+                adress.appendChild(childern);
+            }
+            else{
+                var adress = document.querySelector('.c');
+                var childern = document.createElement('h'); 
+                childern.innerHTML = `<h4> Some special char </h4>`;
+                adress.appendChild(childern);
+            }
+        })
+        }, 0);
+
+    </script>
+</body>
+</html>

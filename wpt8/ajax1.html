@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="c">
+
+    </div>
+    <button class="btn" onclick="f1()">Clcik here</button>
+    <script>
+        function f1(){
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET','https://jsonplaceholder.typicode.com/users');
+            xhr.send();
+
+            xhr.onreadystatechange = () => {
+                if(xhr.status == 200 && xhr.readyState == 4){
+
+                console.log("Connected succesfully and working ");
+                const jsObj = JSON.parse(xhr.responseText);
+                const parent = document.getElementById('c');
+                for(let i =0; i < jsObj.length ; i++ ){
+                    let children = document.createElement('h1');
+                    children.innerHTML=jsObj[i].id + "  "+ jsObj[i].name;
+                    parent.appendChild(children);
+                }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

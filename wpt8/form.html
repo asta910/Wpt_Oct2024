@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+    <table border="1px" cellspacing="3"cellpadding="1px"> 
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>email</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>KillMonger</td>
+                <td>KillMonger@gmail@email.com</td>
+            </tr>
+        </thead>
+
+            <tbody id="c">
+            </tbody>
+
+    </table>
+
+    <button onclick="fetchdata()">Click Me </button>
+
+    <script>
+
+        function fetchdata()
+        {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET','https://jsonplaceholder.typicode.com/users');
+            xhr.send();
+
+            xhr.onreadystatechange = () =>{
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    const infoObject = JSON.parse(xhr.responseText);
+                    const co = document.getElementById('c');
+
+                    for(i =0; i < infoObject.length; i++){
+                        let row = document.createElement('tr');
+                        let d1 = document.createElement('td')
+                        let d2 = document.createElement('td')
+                        let d3 = document.createElement('td')
+
+                        d1.innerHTML=infoObject[i].id;  
+                        d2.innerHTML=infoObject[i].name;  
+                        d3.innerHTML=infoObject[i].email;  
+
+                        row.appendChild(d1);
+                        row.appendChild(d2);
+                        row.appendChild(d3);
+
+                        co.appendChild(row);
+
+                    }
+
+                }
+            }
+
+
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqery</title>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+  <style>
+    #comdiv{
+        display: flex;
+       
+    }
+    #d1,#d2,#d3,#d4{
+        flex: 1;
+        background-color: grey;
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <h1> Hello this is IET</h1>
+    <p class="devv">This is acdac center located in shivaji nagar modern colony.</p>
+<div id="comdiv">
+  <div id="d1">First Div</div>
+  <div id="d2">Second Div</div>
+  <div id="d3">Third Div</div>
+  <div id="d4">Fourth Div</div>
+</div>
+<button id="clicked">Click me</button>
+    <script>
+            $('#clicked').on('click',()=>{
+                
+                // $('div').fadeOut(2000);
+                // $('div').fadeIn(500);
+                // $('div').fadeToggle(1000);
+                $('div').toggle(1000);
+                 $('div').fadeIn(2000);
+                 $('div').fadeOut(500);
+            })
+    </script>
+</body>
+</html>

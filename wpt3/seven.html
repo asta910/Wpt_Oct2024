@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arr</title>
+</head>
+<body>
+    <script>
+        const arr=[10,20,30,40,50,30,60,70,80,30,90];
+        document.write(`arr iss ${arr}<br>`);
+
+        document.write(`30 found : ${arr.includes(30)} <br>`);
+        document.write(`300 found : ${arr.includes(300)} <br>`);
+
+        let str="green apples";
+	    document.write(`${str.includes("app")}<br>`);
+	    document.write(`${str.includes("in")}<br>`);
+        document.write(`${arr.indexOf(30)}<br>`);
+	    document.write(`${arr.indexOf(600000)}<br>`);	  
+	    document.write(`${arr.indexOf(30, 9)}<br>`);	
+        document.write(`${arr.lastIndexOf(30)}<br>`);
+        document.write(`${arr.reverse()}<br>`);
+        document.write(`${arr.sort()}<br>`);
+
+        const names=['ramarao','raman','rama','Ramakrishna','Ramana','ramarama','ramaraj'];
+
+        document.write(`${names.sort().reverse()} <br>`);
+
+        document.write(`${names.join('👍'   )}`)
+
+    </script>
+    
+</body>
+</html>

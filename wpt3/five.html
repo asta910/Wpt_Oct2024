@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [10,20,30,40,50,60];
+        const [p,q,r] = a;
+        document.write(`Values : ${p}, ${q}, ${r} `);
+
+        const array=['html','css','js','bs','angular','react','node','ajax','jquery'];
+   
+let v1=10,v2=30;
+[v1,v2] = [v2,v1];
+document.write(`${v1}\n\n\n\n`);
+document.write(`${v2}\n\n\n\n`);
+
+let [m,,,,,n,...last] = array;
+document.write(`${m}\n\n\n\n`);
+document.write(`${n}\n\n\n\n`);
+document.write(`${last}\n\n\n\n`);
+
+for(let b of array){
+	document.write(`$b`);
+}
+
+for(let b in array){
+	document.write(`${array[b]} \n\n`);
+}
+    </script>
+</body>
+</html>

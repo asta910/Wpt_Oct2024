@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+<body style="background:linear-gradient(to top,red ,blue) ; background-size: cover;         background-position-x:center;background-repeat: no-repeat ;height:100vh;" >
+  
+    <div class="navdiv">
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+        <a href="#">Address</a>
+    </div>
+    
+    <div class="main" >
+        <div class="one">
+            <img src="./photos/img4.jfif" alt="">
+        </div>
+    </div>
+    
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20vh;
+        }
+        .navdiv :hover{
+            transform: scale(1.05); 
+            transition: transform 0.3s ease, background 1s ease-in-out;
+            background-color: red;
+
+        }
+        .navdiv > a{
+            color:aqua;
+            text-decoration: none;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            margin: 2rem;
+            font-family: cursive;
+        }
+        .navdiv > a  :hover {
+            transform: scale(1.05); 
+            transition: transform 0.3s ease, background 1s ease-in-out;
+            color: red;
+        
+        }
+        .main:hover{
+            transform: scale(1.05); 
+            transition: transform 0.3s ease, background 1s ease-in-out;
+            background-color: red;
+        }
+    </style>
+</body>
+</html>

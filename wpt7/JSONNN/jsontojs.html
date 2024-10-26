@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="hello"></p>
+    <p id="hii"></p>
+    <script>
+        const txt = '{"name":"John", "age":30, "city":"New York"}';
+        const txt1 = '{"name":"John", "age":30, "city":"New York"}'
+        const txt2 = '{"name":"John", "age":30, "city":"New York"}'
+        const txt3 = '{"name":"John", "age":30, "city":"New York"}'
+
+        const obj = JSON.parse(txt);
+        // document.getElementById("hello").innerHTML = obj.name + ", " + obj.age + " , "+obj.city;
+        for(var i in obj)
+        
+    {
+        document.write(obj[i])
+    }
+    
+        const txt4 = '{"name":"John", "age":30, "city":"New York"}'
+        const obj1 = JSON.stringify(txt);
+        // document.getElementById("hii").innerHTML = obj.name + ", " + obj.age + " , "+obj.city;s
+        </script>
+</body>
+</html>

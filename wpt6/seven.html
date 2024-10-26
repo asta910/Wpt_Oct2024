@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        .text1{
+            font-size: x-large;
+        }
+        textarea{
+            display: flex;
+            justify-content: center; 
+            width: 50rem;
+            height: 20rem;
+        }
+        #col{
+            width: 5rem;
+            height: 5rem;
+        }
+        button{
+            padding: 1rem;
+        }
+        .pick{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text1">
+        <textarea name="txt1" id="txt1">Anime (アニメ) is Japanese for 'animation'. In Japan, anime is the word used for all animation. Outside of Japan, the term anime refers to Japanese animation, which this article is about. Some anime is drawn by hand, but anime can also be made with CGI computer animation.</textarea>
+    </div>
+    <div id="btns">
+        <button onclick="left()">LEFT</button>
+        <button onclick="right()">RIGHT</button>
+        <button onclick="bold()"><b>Bold</b></button>
+        <button onclick="Italic()"><em>Italic</em></button>
+        <button onclick="Strike()"><s>Strike</s></button>
+        <button onclick="color()"><div > Change</div></button>
+        <br><br>
+        <label for="co" class="pick">Pick Color </label>
+        <div class="colArea" id="co">
+            <input type="color" name="" id="col">
+        </div>
+    </div>
+
+    <script>
+        function left()
+        {
+            let textarea = document.querySelector("#txt1");
+           textarea.style.textAlign = "left";
+        }
+        function right()
+        {
+           let textarea = document.querySelector("#txt1");
+           textarea.style.textAlign = "right";
+    
+        }
+        function bold() {
+            let textarea = document.querySelector("#txt1");
+            textarea.style.fontWeight = textarea.style.fontWeight === "bold" ? "normal" : "bold";
+        }
+        function Italic()
+        {
+            let textarea = document.querySelector("#txt1");
+           textarea.style.fontStyle = "italic";
+        }
+        function Strike()
+        {
+            let textarea = document.querySelector("#txt1");
+            textarea.style.textDecoration = textarea.style.textDecoration === "line-through" ? "none" : "line-through";
+        }
+        function color(){
+            var col = document.querySelector('#col');
+            let colorr = col.value;
+
+            let textarea = document.querySelector("#txt1");
+            textarea.style.color = colorr;
+        }
+
+
+
+    </script>
+</body>
+</html>

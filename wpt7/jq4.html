@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Slide Down Example</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <style>
+        #comdiv {
+            display: flex;
+            flex-direction: column; /* Change to column for better visibility */
+        }
+        #d1, #d2, #d3, #d4 {
+            display: none; /* Hide the divs initially */
+            background-color: grey;
+            width: 100px; /* Increase width for better visibility */
+            height: 30px;
+            padding: 3px;
+            margin: 1rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            text-align: center; /* Center the text */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Hello this is IET</h1>
+    <p class="devv">This is acdac center located in shivaji nagar modern colony.</p>
+    <div id="comdiv">
+        <div id="d1">First Div</div>
+        <div id="d2">Second Div</div>
+        <div id="d3">Third Div</div>
+        <div id="d4">Fourth Div</div>
+    </div>
+    <button id="clicked">Click me</button>
+    
+    <script>
+        $('#clicked').on('click', () => {
+            $('#comdiv div').slideDown(1000); // Apply slideDown to all child divs
+        });
+        
+    </script>
+</body>
+</html>

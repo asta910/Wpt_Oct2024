@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array=[];
+        array.push(10);
+        array.push(20);
+        array.push(30);
+        array.push(60);
+        array.push(45);
+        let c=array.push(40);
+        let t=array.pop();
+        document.write(`array	${array}<br>`);
+        document.write(`${c}<br>`);
+        document.write(`array	${array}<br>`);
+        document.write(`${t}<br>`);
+        document.write(`${array}<br>`);
+        let x=array.pop();
+        document.write(`1st pop ${x}<br>`);
+        document.write(`2nd pop ${array.pop()}<br>`);
+        document.write(`array	${array}<br>`);	 
+        array.push(11,22,33);
+        document.write(`array	${array}<br>`);
+      </script>
+</body>
+</html>

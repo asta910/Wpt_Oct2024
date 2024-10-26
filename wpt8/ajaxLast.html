@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" id="btn"> Click here bro </button>
+
+    <script>
+        function fun() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) { 
+                        var jsObj = JSON.parse(xhr.responseText);
+                        console.log(`Name is ${jsObj[0].name} and ID is ${jsObj[0].id}`);
+                }                 
+            };
+
+            xhr.send(); 
+        }
+
+        document.querySelector('#btn').addEventListener('click', fun);
+    </script>
+</body>
+</html>
