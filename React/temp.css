@@ -1,0 +1,26 @@
+*{
+    background-color: rgb(24, 19, 19);
+    color: wheat;
+    font-size: xx-large;
+    
+}
+input{
+    border: 2px solid gray;
+    font-family: san;
+    color: aquamarine;
+    padding: 1rem;
+    margin-top: -4rem;
+}
+input:hover{
+    cursor: pointer;
+}
+div{
+    padding: 2rem;
+    font-family: san;
+}
+.two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+}

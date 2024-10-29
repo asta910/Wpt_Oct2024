@@ -1,0 +1,22 @@
+.divOne{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    margin: 5rem;
+    height: 60vh;
+    width: 60vh;
+    height: 20vh;
+}
+.btn{
+    margin: 0rem 2rem;
+    min-width: 6rem;
+    min-height: 2rem;
+}
+*{
+    background-color: rgb(48, 39, 39);
+    justify-content: center;
+}
+h1{
+    font-size: 22px;
+    color: rgb(21, 69, 131);
+}
